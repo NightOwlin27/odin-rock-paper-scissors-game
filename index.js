@@ -51,9 +51,18 @@ function playGame () {
         const humanSelection = getHumanChoice();
         playRound(humanSelection, computerSelection);
     }
-    console.log(`Thats the end of the match!
-            Human Score: ${humanScore}
-            Computer Score: ${computerScore}`);
+
+    if (humanScore > computerScore) {
+        console.log(`Thats the end of the match! You Win!`);
+    } else if (computerScore > humanScore) {
+        console.log(`Thats the end of the match! You Lost!
+                            Computer Wins!`);
+    } else if (humanScore === computerScore) {
+        console.log(`Thats the end of the match! It's a draw!`);
+    }
+        console.log(`
+                    Human Score: ${humanScore}
+                    Computer Score: ${computerScore}`);
 }
 
 playGame();
