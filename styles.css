@@ -1,0 +1,77 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: #168B8D;
+    color: #1e212b;
+}
+
+main {
+    background-color: #D6F4FF;
+    text-align: center;
+    margin: 10vh auto;
+    width: 55vh;
+    height: 75vh;
+    border-radius: 20px;
+}
+
+h1 {
+    padding: 50px 0px 20px 0px;
+    font-size: 3rem;
+}
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: .5em;
+
+
+
+}
+
+button {
+    padding: 1em 3em;
+    border: 2px solid #1e212b;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+.text {
+    display: flex;
+    justify-content: space-around;
+    margin: 4em;
+}
+
+.vs-screen {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid purple;
+    padding: 2em;
+
+}
+
+.icon {
+    width: 140px;
+    height: 140px;
+    border:2px solid black;
+    
+}
+
+.scores {
+    display: flex;
+}
