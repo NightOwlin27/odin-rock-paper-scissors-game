@@ -9,6 +9,12 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: "CursedTimerUlil-Aznm";
+    src: url("./cursed-timer-ulil-font/CursedTimerUlil-Aznm.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
 
 body {
     background-color: #168B8D;
@@ -21,7 +27,9 @@ main {
     margin: 10vh auto;
     width: 55vh;
     height: 75vh;
+    font-family: "SUSE", sans-serif;
     border-radius: 20px;
+    border: 10px solid #EDAE49;
 }
 
 h1 {
@@ -40,20 +48,21 @@ h1 {
 }
 
 button {
-    padding: 1em 3em;
+    padding: 1rem 3rem;
     border: 2px solid #1e212b;
     border-radius: 10px;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    border: 3px solid #EDAE49;
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 .text {
     display: flex;
     justify-content: space-around;
-    margin: 4em;
+    margin: 2em 3em;
 }
 
 .vs-screen {
@@ -66,12 +75,35 @@ h2 {
 }
 
 .icon {
-    width: 140px;
-    height: 140px;
+    width: 180px;
+    height: 180px;
     border:2px solid black;
+    border-radius: 20px;
     
 }
 
 .scores {
     display: flex;
+    justify-content: space-around;
+    border:2px solid black;
+    padding: 2em;
+    border-radius: 20px;
+
+}
+
+.score {
+    width: 140px;
+    height: 140px;
+    border:2px solid black;
+    font-family: "CursedTimerUlil-Aznm";
+    font-size: 6rem;
+    padding-top: .25em
+}
+
+.prompt {
+    width: 280px;
+    height: 180px;
+    border:2px solid black;
+    font-size: 1.5rem;
+    padding-top: .8em;
 }

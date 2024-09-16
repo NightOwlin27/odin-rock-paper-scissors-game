@@ -1,12 +1,18 @@
 const choices = ["rock", "paper", "scissors"];
 
-const rock = document.querySelector('.btn.rock')
-const paper = document.querySelector('.btn.paper')
-const scissors = document.querySelector('.btn.scissors')
+const rock = document.querySelector('.btn.rock');
+const paper = document.querySelector('.btn.paper');
+const scissors = document.querySelector('.btn.scissors');
+const playerScore = document.querySelector('.player.score');
+const cpuScore = document.querySelector('.cpu.score');
+const prompt = document.querySelector(".prompt");
 
 let humanScore = 0;
 let computerScore = 0; 
 let playRoundCount = 0;
+
+playerScore.textContent += humanScore;
+cpuScore.textContent += computerScore;
 
 rock.addEventListener('click', function () {
     let humanChoice = choices[0];
@@ -42,16 +48,15 @@ function getComputerChoice () {
     const computerChoice = Math.floor(Math.random() * choices.length);
     return choices[computerChoice];
 }
-    
-//  I had to switch the array choices to vice versa in order to get a correct match between the
-// player and computer and I do not yet understand why.
 
 function playRound(humanChoice, computerChoice) {
+
 
     if (humanChoice === computerChoice) {
         humanScore = humanScore;
         computerScore = computerScore;
         console.log("It's a draw");
+        prompt.textContent = `It's a draw`;
     } else if (
         (humanChoice === choices[0] && computerChoice === choices[2]) ||
         (humanChoice === choices[1] && computerChoice === choices[0]) ||
@@ -59,9 +64,13 @@ function playRound(humanChoice, computerChoice) {
     ) {
         humanScore += 1;
         console.log("You scored 1 point!");
+        prompt.textContent = `You scored 1 point!`;
+        playerScore.textContent = humanScore;
     } else {
         computerScore += 1;
         console.log("Computer scores 1 point!");
+        prompt.textContent = `CPU scores 1 point!`;
+        cpuScore.textContent = computerScore;
     }  
 }
 
@@ -74,15 +83,22 @@ function playGame () {
 function getFinalScore () {
     if (humanScore > computerScore) {
         console.log(`Thats the end of the match! You Win!`);
+        prompt.textContent = `Thats the end of the match! You Win!`;
+
     } else if (computerScore > humanScore) {
-        console.log(`Thats the end of the match! You Lost!
-                                Computer Wins!`);
+        console.log(`Thats the end of the match!
+                                CPU Wins!`);
+        prompt.textContent = `Thats the end of the match! CPU Wins!`;
     } else if (humanScore === computerScore) {
         console.log(`Thats the end of the match! It's a draw!`);
+        prompt.textContent = `Thats the end of the match! It's a draw!`;
     }
         console.log(`
-                Human Score: ${humanScore}
+                Human Score: ${humanScore};
                 Computer Score: ${computerScore}`);
+        prompt.textContent += `
+                Human Score: ${humanScore}
+                Computer Score: ${computerScore}`;
     }
 
 
