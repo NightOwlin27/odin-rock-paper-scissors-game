@@ -23,13 +23,18 @@ body {
 
 main {
     background-color: #D6F4FF;
+    background-image: url(images/grainy.jpg);
+    background-size: cover;
+    background-blend-mode: lighten;
     text-align: center;
     margin: 10vh auto;
     width: 55vh;
+    /* width: 55rem; */
     height: 75vh;
+    /* height: 75rem; */
     font-family: "SUSE", sans-serif;
     border-radius: 20px;
-    border: 10px solid #EDAE49;
+    border: 10px solid #1e212b;
 }
 
 h1 {
@@ -49,10 +54,10 @@ h1 {
 
 button {
     padding: 1rem 3rem;
-    border: 2px solid #1e212b;
+    /* border: 2px solid #1e212b; */
     border-radius: 10px;
     font-size: 1.5rem;
-    border: 3px solid #EDAE49;
+    border: 5px solid #EDAE49;
 }
 
 h2 {
@@ -62,48 +67,60 @@ h2 {
 .text {
     display: flex;
     justify-content: space-around;
-    margin: 2em 3em;
+    margin: 2em -4em;
 }
 
 .vs-screen {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: 2px solid purple;
-    padding: 2em;
+    /* border: 2px solid purple; */
+    padding: 2em 1em;
 
 }
 
 .icon {
     width: 180px;
     height: 180px;
-    border:2px solid black;
+    border: 5px solid #EDAE49;
     border-radius: 20px;
     
 }
 
-.scores {
+.scoreboard {
     display: flex;
     justify-content: space-around;
-    border:2px solid black;
-    padding: 2em;
+    /* border:2px solid black; */
+    padding: 4em 0em;
+    margin: 2.9em -.5em;
     border-radius: 20px;
+    background-color: #EDAE49;
+    border: 10px solid #1e212b;
 
 }
 
 .score {
     width: 140px;
     height: 140px;
-    border:2px solid black;
+    border:5px solid black;
     font-family: "CursedTimerUlil-Aznm";
     font-size: 6rem;
-    padding-top: .25em
+    padding-top: .25em;
+    color: #168B8D;
 }
 
 .prompt {
-    width: 280px;
-    height: 180px;
-    border:2px solid black;
-    font-size: 1.5rem;
-    padding-top: .8em;
+    width: 20rem;
+    height: 10.8rem;
+    border:5px solid black;
+    font-size: 2rem;
+    /* padding-top: .8em; */
+}
+
+.score,
+.prompt {
+    background-color: #D6F4FF;
+    background-image: url(images/grainy.jpg);
+    background-size: cover;
+    background-blend-mode: lighten;
 }
