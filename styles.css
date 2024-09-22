@@ -60,6 +60,8 @@ button {
     border: 5px solid #EDAE49;
 }
 
+/* Buttons need hover or focus effects/additional styling */
+
 h2 {
     font-size: 3rem;
 }
@@ -80,6 +82,8 @@ h2 {
 }
 
 .icon {
+    display: flex;
+    justify-content: center;
     width: 180px;
     height: 180px;
     border: 5px solid #EDAE49;
@@ -87,12 +91,22 @@ h2 {
     
 }
 
+/* I want to have the icons transition into view when selected */
+/* .svg::before {
+    opacity: 0;
+}
+
+.svg::after {
+    opacity: 1;
+    transition-duration: 3s;
+} */
+
 .scoreboard {
     display: flex;
     justify-content: space-around;
     /* border:2px solid black; */
     padding: 4em 0em;
-    margin: 2.9em -.5em;
+    margin: 2.9em -.6em;
     border-radius: 20px;
     background-color: #EDAE49;
     border: 10px solid #1e212b;
